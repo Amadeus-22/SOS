@@ -1,0 +1,19 @@
+asgiref==3.9.2
+Django==5.2.6
+django-braces==1.17.0
+django-jazzmin==3.0.1
+gunicorn==23.0.0
+narwhals==2.7.0
+numpy==2.2.6
+packaging==25.0
+pandas==2.3.3
+plotly==6.3.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
+scipy==1.15.3
+six==1.17.0
+sqlparse==0.5.3
+typing==3.7.4.3
+typing_extensions==4.15.0
+tzdata==2025.2
+Python == 3.10.12

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Analítico SOS</title>
+    </head>
+<body>
+    <h1>Dashboard Analítico SOS</h1>
+
+    <h2>Total Geral e Métricas Chave</h2>
+    <p><strong>Pessoas únicas atendidas pela ONG (todos os serviços):</strong> {{ total_pessoas_unicas_geral }}</p>
+
+    <hr>
+    
+    <h2>Gráfico de Atendimentos (Últimos 30 Dias)</h2>
+    
+    <div class="chart-container">
+        {{ atendimentos_diarios_chart | safe }} 
+    </div>
+
+    <hr>
+
+    <h2>Análise por Serviço</h2>
+    
+    <h3>Pessoas Únicas por Serviço</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Serviço</th>
+                <th>Pessoas Únicas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in pessoas_unicas_por_servico %}
+            <tr>
+                <td>{{ item.servico__nome }}</td>
+                <td>{{ item.total_pessoas_unicas }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>Atendimentos Registrados por Serviço</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Serviço</th>
+                <th>Total de Atendimentos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in atendimentos_por_servico %}
+            <tr>
+                <td>{{ item.servico__nome }}</td>
+                <td>{{ item.total_atendimentos }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

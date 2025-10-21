@@ -1,0 +1,20 @@
+/* static/css/custom_admin.css */
+
+/* Alarga as caixas de permissão na página de Modificar Grupo */
+.module table .form-row .related-widget-wrapper {
+    width: 100% !important;
+}
+.related-widget-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/* Alarga as colunas das caixas de filtro */
+.module table .form-row .related-widget-wrapper .selector {
+    width: 48% !important; 
+    min-width: 300px; /* Garante que caiba a palavra 'Administração | entrada de log' */
+}
+/* Aumenta a largura do campo de nome */
+.vTextField {
+    width: 100% !important;
+}
